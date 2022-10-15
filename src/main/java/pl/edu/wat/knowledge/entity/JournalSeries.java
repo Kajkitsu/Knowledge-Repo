@@ -26,6 +26,8 @@ public class JournalSeries extends Entity {
 
     @NonNull
     Issn issn;
+    @NonNull
+    Integer baseScore;
 
     @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
     @Getter
@@ -43,7 +45,4 @@ public class JournalSeries extends Entity {
             return value;
         }
     }
-
-    @NonNull
-    Integer baseScore;
 }
