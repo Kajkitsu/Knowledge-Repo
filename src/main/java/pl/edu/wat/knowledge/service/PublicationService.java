@@ -1,7 +1,5 @@
 package pl.edu.wat.knowledge.service;
 
-import java.util.Collection;
-import java.util.stream.Stream;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -10,6 +8,9 @@ import org.springframework.stereotype.Service;
 import pl.edu.wat.knowledge.dto.PublicationResponse;
 import pl.edu.wat.knowledge.repository.ArticleRepository;
 import pl.edu.wat.knowledge.repository.ChapterRepository;
+
+import java.util.Collection;
+import java.util.stream.Stream;
 
 
 @Service
@@ -22,8 +23,8 @@ public class PublicationService {
 
     public Collection<PublicationResponse> getAll() {
         return Stream.concat(
-                articleRepository.findAll().stream().map(PublicationResponse::from),
-                chapterRepository.findAll().stream().map(PublicationResponse::from))
+                        articleRepository.findAll().stream().map(PublicationResponse::from),
+                        chapterRepository.findAll().stream().map(PublicationResponse::from))
                 .toList();
 
     }
