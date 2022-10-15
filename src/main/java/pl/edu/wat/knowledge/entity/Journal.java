@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @FieldNameConstants
 @Builder
-public class JournalSeries extends Entity {
+public class Journal extends Entity {
 
     @NonNull
     Publisher publisher;

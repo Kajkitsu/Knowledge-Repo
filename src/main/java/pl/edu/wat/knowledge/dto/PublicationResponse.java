@@ -33,15 +33,15 @@ public class PublicationResponse {
                         .collect(Collectors.joining(", ")),
                 article.getScore(),
                 article.getCollection(),
-                article.getJournalSeries().getTitle(),
-                article.getJournalSeries().getIssn().toString(),
-                article.getJournalSeries().getPublisher().getName() + ":" + article.getJournalSeries().getPublisher().getLocation(),
+                article.getJournal().getTitle(),
+                article.getJournal().getIssn().toString(),
+                article.getJournal().getPublisher().getName() + ":" + article.getJournal().getPublisher().getLocation(),
                 Stream.of(
                                 Optional.ofNullable(article.getVol()).map(it -> "vol." + it),
                                 Optional.ofNullable(article.getNo()).map(it -> "no." + it),
                                 Optional.ofNullable(article.getArticleNo()).map(it -> "art. no." + it)
                         ).flatMap(Optional::stream)
-                        .collect(Collectors.joining(",")));
+                        .collect(Collectors.joining(", ")));
 
     }
 

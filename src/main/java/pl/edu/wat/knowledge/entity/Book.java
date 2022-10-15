@@ -1,6 +1,7 @@
 package pl.edu.wat.knowledge.entity;
 
 import com.mongodb.lang.NonNull;
+import com.mongodb.lang.Nullable;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Data;
@@ -33,6 +34,9 @@ public class Book extends Entity {
 
     @NonNull
     Integer baseScore;
+
+    @Nullable
+    Author editor;
 
 
     @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)

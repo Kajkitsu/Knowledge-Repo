@@ -13,7 +13,7 @@ import pl.edu.wat.knowledge.repository.ArticleRepository;
 import pl.edu.wat.knowledge.repository.AuthorRepository;
 import pl.edu.wat.knowledge.repository.BookRepository;
 import pl.edu.wat.knowledge.repository.ChapterRepository;
-import pl.edu.wat.knowledge.repository.JournalSeriesRepository;
+import pl.edu.wat.knowledge.repository.JournalRepository;
 import pl.edu.wat.knowledge.repository.PublisherRepository;
 
 @Service
@@ -26,7 +26,7 @@ public class ScriptService {
     AuthorRepository authorRepository;
     BookRepository bookRepository;
     ChapterRepository chapterRepository;
-    JournalSeriesRepository journalSeriesRepository;
+    JournalRepository journalRepository;
     PublisherRepository publisherRepository;
 
     public String exec(String script) {
@@ -39,7 +39,7 @@ public class ScriptService {
             bindings.putMember("authorRepository", authorRepository);
             bindings.putMember("bookRepository", bookRepository);
             bindings.putMember("chapterRepository", chapterRepository);
-            bindings.putMember("journalSeriesRepository", journalSeriesRepository);
+            bindings.putMember("journalRepository", journalRepository);
             bindings.putMember("publisherRepository", publisherRepository);
             return context.eval("js", script).toString();
         } catch (PolyglotException e) {

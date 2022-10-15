@@ -25,7 +25,7 @@ public class Article extends Entity {
     Integer articleNo;
 
     @NonNull
-    JournalSeries journalSeries;
+    Journal journal;
 
     @NonNull
     Set<Author> authors;
