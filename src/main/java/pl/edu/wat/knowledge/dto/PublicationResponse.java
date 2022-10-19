@@ -29,7 +29,7 @@ public class PublicationResponse {
                 "ARTICLE",
                 article.getTitle(),
                 article.getAuthors().stream()
-                        .map(it -> "%s %s".formatted(it.getName(), it.getSurname()))
+                        .map(it -> String.format("%s %s", it.getName(), it.getSurname()))
                         .collect(Collectors.joining(", ")),
                 article.getScore(),
                 article.getCollection(),
@@ -51,7 +51,7 @@ public class PublicationResponse {
                 "CHAPTER",
                 chapter.getTitle(),
                 chapter.getAuthors().stream()
-                        .map(it -> "%s %s".formatted(it.getName(), it.getSurname()))
+                        .map(it -> String.format("%s %s", it.getName(), it.getSurname()))
                         .collect(Collectors.joining(", ")),
                 chapter.getScore(),
                 chapter.getCollection(),

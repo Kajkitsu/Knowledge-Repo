@@ -10,6 +10,7 @@ import pl.edu.wat.knowledge.repository.ArticleRepository;
 import pl.edu.wat.knowledge.repository.ChapterRepository;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
@@ -25,7 +26,7 @@ public class PublicationService {
         return Stream.concat(
                         articleRepository.findAll().stream().map(PublicationResponse::from),
                         chapterRepository.findAll().stream().map(PublicationResponse::from))
-                .toList();
+                .collect(Collectors.toList());
 
     }
 }
