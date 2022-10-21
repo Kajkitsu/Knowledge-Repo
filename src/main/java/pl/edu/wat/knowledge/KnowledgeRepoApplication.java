@@ -1,22 +1,20 @@
 package pl.edu.wat.knowledge;
 
+import net.bytebuddy.pool.TypePool;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.Comparator;
-import java.util.stream.Collectors;
+import pl.edu.wat.knowledge.reflection.ModifyClassException;
+import pl.edu.wat.knowledge.reflection.ReflectionSetter;
 
 @SpringBootApplication
 public class KnowledgeRepoApplication {
 
-    public static void main(String[] args) {
-        System.out.println(System.getProperties().entrySet()
-                .stream()
-                .sorted(Comparator.comparing(it -> it.getKey().toString()))
-                .map(
-                        it -> it.getKey().toString()+"="+it.getValue().toString()+"\n"
-                ).collect(Collectors.joining()));
-        System.out.println(Thread.currentThread().getContextClassLoader());
-//        SpringApplication.run(KnowledgeRepoApplication.class, args);
+    public static void main(String[] args) throws ModifyClassException {
+
+        ReflectionSetter.apply(TypePool.Default.ofSystemLoader());
+        SpringApplication.run(KnowledgeRepoApplication.class, args);
     }
+
+
 
 }

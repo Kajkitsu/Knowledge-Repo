@@ -22,8 +22,9 @@ dependencies {
     implementation 'org.graalvm.compiler:compiler:22.0.0'
     implementation 'org.graalvm.sdk:graal-sdk:22.0.0'
     implementation 'org.graalvm.truffle:truffle-api:22.0.0'
-    implementation 'org.javassist:javassist:3.29.2-GA'
     implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'net.bytebuddy:byte-buddy:1.12.17'
+    implementation 'net.bytebuddy:byte-buddy-agent:1.12.17'
 
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'

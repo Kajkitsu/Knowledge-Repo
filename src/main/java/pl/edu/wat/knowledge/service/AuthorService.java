@@ -5,7 +5,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.edu.wat.knowledge.dto.AuthorResponse;
+import pl.edu.wat.knowledge.entity.Author;
 import pl.edu.wat.knowledge.repository.AuthorRepository;
 
 import java.util.List;
@@ -18,10 +18,10 @@ public class AuthorService {
     AuthorRepository authorRepository;
 
 
-    public List<AuthorResponse> getAll() {
+    public List<String> getAll() { //TODO change return Type to AuthorResponse
         return authorRepository.findAll()
                 .stream()
-                .map(AuthorResponse::from)
+                .map(Author::toString)
                 .collect(Collectors.toList());
     }
 }
