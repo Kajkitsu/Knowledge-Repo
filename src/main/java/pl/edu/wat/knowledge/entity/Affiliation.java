@@ -3,7 +3,7 @@ package pl.edu.wat.knowledge.entity;
 import com.mongodb.lang.NonNull;
 import com.mongodb.lang.Nullable;
 import lombok.AccessLevel;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.FieldDefaults;
@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 @EqualsAndHashCode(callSuper = true)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @FieldNameConstants
-@Builder
+@AllArgsConstructor
 public class Affiliation extends Entity {
     @NonNull
     @Indexed(unique = true)

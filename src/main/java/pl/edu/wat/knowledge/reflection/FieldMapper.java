@@ -21,11 +21,11 @@ public class FieldMapper {
     Integer targetArgIndex;
 
     public static Implementation.Composable getMappingImpl(TypeDescription target,
-                                                TypeDescription source,
-                                                Integer sourceArgIndex,
-                                                Integer targetArgIndex,
-                                                List<String> fields) {
-        var fieldMapper = new FieldMapper(target,source,sourceArgIndex,targetArgIndex);
+                                                           TypeDescription source,
+                                                           Integer sourceArgIndex,
+                                                           Integer targetArgIndex,
+                                                           List<String> fields) {
+        var fieldMapper = new FieldMapper(target, source, sourceArgIndex, targetArgIndex);
 
         var list = fields.stream()
                 .map(fieldMapper::getImplForField)
@@ -36,9 +36,9 @@ public class FieldMapper {
     private static Implementation.Composable concat(List<MethodCall> list) {
         var iterator = list.iterator();
         Implementation.Composable result = null;
-        if(iterator.hasNext()){
+        if (iterator.hasNext()) {
             result = iterator.next();
-            while(iterator.hasNext()){
+            while (iterator.hasNext()) {
                 result = result.andThen(iterator.next());
             }
         }

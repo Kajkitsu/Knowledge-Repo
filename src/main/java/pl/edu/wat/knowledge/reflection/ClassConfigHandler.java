@@ -27,7 +27,7 @@ public class ClassConfigHandler {
     private TypeDescription mapper;
 
     public static List<TypeDescription> apply(TypePool typePool, ClassConfig config) {
-        var handler = new ClassConfigHandler(typePool,config);
+        var handler = new ClassConfigHandler(typePool, config);
         return List.of(
                 handler.entity,
                 handler.request,
@@ -43,7 +43,6 @@ public class ClassConfigHandler {
 
         List<Pair<String, TypeDescription>> newFieldsForEntity = config.getFieldConfigs()
                 .stream()
-                .filter(FieldConfig::getVisibleInResponse)
                 .map(it -> Pair.of(it.getName(), toType(typePool, it.getType())))
                 .toList();
         this.newFieldsForResponse = config.getFieldConfigs()

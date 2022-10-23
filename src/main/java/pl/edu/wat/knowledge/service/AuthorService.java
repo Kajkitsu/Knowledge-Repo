@@ -7,10 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.edu.wat.knowledge.dto.AuthorRequest;
 import pl.edu.wat.knowledge.dto.AuthorResponse;
+import pl.edu.wat.knowledge.entity.Author;
+import pl.edu.wat.knowledge.exception.EntityNotFoundException;
 import pl.edu.wat.knowledge.mapper.AuthorMapper;
 import pl.edu.wat.knowledge.repository.AuthorRepository;
 
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -32,5 +35,14 @@ public class AuthorService {
         return authorMapper.mapToResponse(
                 authorRepository.save(
                         authorMapper.mapToEntity(request)));
+    }
+
+    public Author getById(String id) {
+        return authorRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(Author.class, id));
+    }
+
+    public Set<Author> getByIds(List<String> authorIds) {
+        return authorIds.stream().map(this::getById).collect(Collectors.toSet());
     }
 }

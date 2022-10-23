@@ -17,14 +17,13 @@ public class KnowledgeRepoApplication {
     public static void main(String[] args) throws ModifyClassException {
 
         List<ClassConfig> classConfigList = ReflectionDefinitionLoader.loadModifiedClass(
-                new File("../reflection_config.json")
+                new File("./reflection_config.json")
         );
 
         ReflectionSetter.apply(TypePool.Default.ofSystemLoader(), classConfigList);
 
         SpringApplication.run(KnowledgeRepoApplication.class, args);
     }
-
 
 
 }

@@ -6,12 +6,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.edu.wat.knowledge.dto.AuthorRequest;
 import pl.edu.wat.knowledge.dto.AuthorResponse;
 import pl.edu.wat.knowledge.service.AuthorService;
@@ -33,7 +28,7 @@ public class AuthorController {
     }
 
     @PutMapping
-    public ResponseEntity<AuthorResponse> save(@RequestBody AuthorRequest request){
+    public ResponseEntity<AuthorResponse> save(@RequestBody AuthorRequest request) {
         return new ResponseEntity<>(authorService.save(request), HttpStatus.ACCEPTED);
     }
 

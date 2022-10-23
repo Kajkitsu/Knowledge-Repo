@@ -2,8 +2,8 @@ package pl.edu.wat.knowledge.mapper;
 
 import pl.edu.wat.knowledge.entity.Entity;
 
-public abstract class Mapper<T extends Entity,Z,X> {
-    public T mapToEntity(X request){
+public abstract class Mapper<T extends Entity, Z, X> {
+    public T mapToEntity(X request) {
         T entity = createEntity(request);
         fillReflectionDataInEntity(entity, request);
         return entity;
@@ -11,7 +11,7 @@ public abstract class Mapper<T extends Entity,Z,X> {
 
     protected abstract void fillReflectionDataInResponse(Z response, T entity);
 
-    public Z mapToResponse(T entity){
+    public Z mapToResponse(T entity) {
         Z response = createResponse(entity);
         fillReflectionDataInResponse(response, entity);
         return response;

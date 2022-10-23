@@ -2,11 +2,7 @@ package pl.edu.wat.knowledge.entity;
 
 import com.mongodb.lang.NonNull;
 import com.mongodb.lang.Nullable;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.FieldNameConstants;
 import org.springframework.data.mongodb.core.index.Indexed;

@@ -5,19 +5,20 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.edu.wat.knowledge.entity.Affiliation;
+import pl.edu.wat.knowledge.entity.Journal;
 import pl.edu.wat.knowledge.exception.EntityNotFoundException;
-import pl.edu.wat.knowledge.repository.AffiliationRepository;
+import pl.edu.wat.knowledge.repository.JournalRepository;
 
 
 @Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
-public class AffiliationService {
-    AffiliationRepository affiliationRepository;
+public class JournalService {
 
-    public Affiliation getById(String id) {
-        return affiliationRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException(Affiliation.class, id));
+    JournalRepository journalRepository;
+
+    public Journal getById(String id) {
+        return journalRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException(Journal.class, id));
     }
 }

@@ -8,13 +8,7 @@ import org.graalvm.polyglot.Context;
 import org.graalvm.polyglot.PolyglotException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.edu.wat.knowledge.repository.AffiliationRepository;
-import pl.edu.wat.knowledge.repository.ArticleRepository;
-import pl.edu.wat.knowledge.repository.AuthorRepository;
-import pl.edu.wat.knowledge.repository.BookRepository;
-import pl.edu.wat.knowledge.repository.ChapterRepository;
-import pl.edu.wat.knowledge.repository.JournalRepository;
-import pl.edu.wat.knowledge.repository.PublisherRepository;
+import pl.edu.wat.knowledge.repository.*;
 
 @Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))

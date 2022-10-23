@@ -1,10 +1,7 @@
 package pl.edu.wat.knowledge.entity;
 
 import com.mongodb.lang.NonNull;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.FieldNameConstants;
 
@@ -15,6 +12,7 @@ import java.util.Set;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @FieldNameConstants
 @Builder
+@AllArgsConstructor
 public class Chapter extends Entity {
 
     @NonNull
