@@ -3,12 +3,8 @@ package pl.edu.wat.knowledge.dto;
 import lombok.Value;
 
 @Value
-public class AuthorResponse {
-
-    String id;
+public class AuthorRequest {
     String name;
     String surname;
     String affiliationId;
-    String affiliationName;
-
 }

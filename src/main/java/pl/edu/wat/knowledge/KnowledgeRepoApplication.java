@@ -3,7 +3,7 @@ package pl.edu.wat.knowledge;
 import net.bytebuddy.pool.TypePool;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import pl.edu.wat.knowledge.reflection.ModifyClassException;
+import pl.edu.wat.knowledge.exception.ModifyClassException;
 import pl.edu.wat.knowledge.reflection.ReflectionSetter;
 
 @SpringBootApplication

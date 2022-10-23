@@ -5,7 +5,7 @@ import lombok.Value;
 import java.util.List;
 
 @Value
-public class ModifiedClass {
+public class ClassConfig {
     EntityType entityType;
-    List<AddFieldRequest> addFieldRequests;
+    List<FieldConfig> fieldConfigs;
 }
