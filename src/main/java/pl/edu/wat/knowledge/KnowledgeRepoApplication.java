@@ -12,6 +12,7 @@ public class KnowledgeRepoApplication {
     public static void main(String[] args) throws ModifyClassException {
 
         ReflectionSetter.apply(TypePool.Default.ofSystemLoader());
+
         SpringApplication.run(KnowledgeRepoApplication.class, args);
     }
 

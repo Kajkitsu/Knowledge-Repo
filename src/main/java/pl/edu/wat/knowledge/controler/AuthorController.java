@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import pl.edu.wat.knowledge.dto.AuthorResponse;
 import pl.edu.wat.knowledge.service.AuthorService;
 
 import java.util.Collection;
@@ -24,7 +25,7 @@ public class AuthorController {
     AuthorService authorService;
 
     @GetMapping
-    public ResponseEntity<Collection<String>> getAll() { //TODO change return Type to AuthorResponse
+    public ResponseEntity<Collection<AuthorResponse>> getAll() { //TODO change return Type to AuthorResponse
         return new ResponseEntity<>(authorService.getAll(), HttpStatus.ACCEPTED);
     }
 

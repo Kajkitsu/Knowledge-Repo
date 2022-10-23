@@ -15,7 +15,7 @@ import pl.edu.wat.knowledge.service.ScriptService;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api/publication")
+@RequestMapping("/api/script")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 @FieldDefaults(makeFinal = true, level = AccessLevel.PRIVATE)
 public class ScriptController {

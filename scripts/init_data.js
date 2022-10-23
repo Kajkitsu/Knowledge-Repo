@@ -21,7 +21,7 @@ var pwnPublisher = publisherRepository.save(
         .location("Warszawa")
         .name("Wydawnictwo Naukowe PWN")
         .build()
-);
+);a
 
 var ieeeJournal = journalRepository.save(
     Journal.builder()

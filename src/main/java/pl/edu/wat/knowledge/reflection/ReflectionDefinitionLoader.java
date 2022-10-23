@@ -7,8 +7,9 @@ public class ReflectionDefinitionLoader {
         return List.of(
                 new ModifiedClass(EntityType.AUTHOR,
                         List.of(
-                                new AddFieldRequest("rank",FieldType.STRING)
-                        ))
+                                new AddFieldRequest("rank", FieldType.STRING, true)
+                        )
+                )
         );
     }
 }

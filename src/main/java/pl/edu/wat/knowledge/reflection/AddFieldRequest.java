@@ -6,4 +6,5 @@ import lombok.Value;
 public class AddFieldRequest {
     String name;
     FieldType type;
+    Boolean visibleInResponse;
 }
