@@ -22,8 +22,7 @@ public class ScriptController {
     ScriptService scriptService;
 
     @PutMapping
-    //TODO
-    public ResponseEntity<Object> exec(@RequestBody String script) {
+    public ResponseEntity<String> exec(@RequestBody String script) {
         return new ResponseEntity<>(scriptService.exec(script), HttpStatus.ACCEPTED);
     }
 }

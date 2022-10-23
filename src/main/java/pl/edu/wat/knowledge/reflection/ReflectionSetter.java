@@ -11,15 +11,11 @@ import java.util.stream.Collectors;
 @Slf4j
 public class ReflectionSetter {
 
-    public static void apply(TypePool typePool) throws ModifyClassException {
-        List<ClassConfig> classConfigList = ReflectionDefinitionLoader.loadModifiedClass();
-
+    public static void apply(TypePool typePool, List<ClassConfig> classConfigList) throws ModifyClassException {
         for (ClassConfig config : classConfigList) {
             var retVal = ClassConfigHandler.apply(typePool, config);
             log.debug(retVal.stream().map(TypeDescription::getCanonicalName).collect(Collectors.joining(", ")));
         }
     }
-
-
 
 }
