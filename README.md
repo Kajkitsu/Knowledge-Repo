@@ -3,7 +3,7 @@
 
 ## Script engine
 
-### Install suggested sdkman for managing JDKs
+### Install recommended sdkman for managing JDKs
 
 https://sdkman.io/install
     
