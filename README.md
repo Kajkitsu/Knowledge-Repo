@@ -6,8 +6,9 @@
 ### Install suggested sdkman for managing JDKs
 
 https://sdkman.io/install
+    
     curl -s "https://get.sdkman.io" | bash
-     source "$HOME/.sdkman/bin/sdkman-init.sh"
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
 ### Install GraalVM for Java 17
