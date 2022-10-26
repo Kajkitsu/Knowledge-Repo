@@ -18,8 +18,6 @@ dependencies {
 
     implementation 'org.springdoc:springdoc-openapi-ui:1.6.11'
     implementation 'org.apache.commons:commons-lang3:3.12.0'
-    implementation 'net.bytebuddy:byte-buddy:1.12.17'
-    implementation 'net.bytebuddy:byte-buddy-agent:1.12.17'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.7.1'
 
     compileOnly 'org.projectlombok:lombok:1.18.24'

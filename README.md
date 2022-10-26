@@ -25,3 +25,9 @@ https://sdkman.io/install
     implementation 'org.graalvm.truffle:truffle-api:22.0.0'
 
 
+
+## Runtime class modification
+
+### Dependency
+    implementation 'net.bytebuddy:byte-buddy:1.12.17'
+    implementation 'net.bytebuddy:byte-buddy-agent:1.12.17'
