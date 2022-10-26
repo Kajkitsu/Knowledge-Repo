@@ -17,11 +17,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.7.4'
 
     implementation 'org.springdoc:springdoc-openapi-ui:1.6.11'
-    implementation 'org.graalvm.js:js-scriptengine:22.0.0'
-    implementation 'org.graalvm.js:js:22.0.0'
-    implementation 'org.graalvm.compiler:compiler:22.0.0'
-    implementation 'org.graalvm.sdk:graal-sdk:22.0.0'
-    implementation 'org.graalvm.truffle:truffle-api:22.0.0'
     implementation 'org.apache.commons:commons-lang3:3.12.0'
     implementation 'net.bytebuddy:byte-buddy:1.12.17'
     implementation 'net.bytebuddy:byte-buddy-agent:1.12.17'
